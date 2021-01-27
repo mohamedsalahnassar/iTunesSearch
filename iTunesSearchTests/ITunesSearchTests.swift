@@ -1,6 +1,6 @@
 //
-//  iTunesSearchTests.swift
-//  iTunesSearchTests
+//  ITunesSearchTests.swift
+//  ITunesSearchTests
 //
 //  Created by Mohamed Nassar on 27/01/2021.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import iTunesSearch
 
-class iTunesSearchTests: XCTestCase {
+class ITunesSearchTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
