@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2D500725C20C0C002B7A94 /* UIViewWithRoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D500625C20C0C002B7A94 /* UIViewWithRoundCorners.swift */; };
+		AA2D500C25C21768002B7A94 /* SCLAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = AA2D500B25C21768002B7A94 /* SCLAlertView */; };
+		AA2D501125C21A9D002B7A94 /* MediaTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2D501025C21A9D002B7A94 /* MediaTypeCell.swift */; };
+		AAB55A9A25C2FB450054356C /* GenericMultiSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55A9925C2FB450054356C /* GenericMultiSelectorVC.swift */; };
+		AAB55AA425C314D20054356C /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55AA325C314D20054356C /* MediaType.swift */; };
+		AAB55AAE25C318310054356C /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC325C19FFE008893B6 /* SearchFormViewController.swift */; };
+		AAB55AB325C321F70054356C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAB55AB225C321F70054356C /* IQKeyboardManagerSwift */; };
 		AAFF39ED25C14A18008893B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF39EC25C14A18008893B6 /* AppDelegate.swift */; };
 		AAFF39EF25C14A18008893B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF39EE25C14A18008893B6 /* SceneDelegate.swift */; };
 		AAFF39F425C14A18008893B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFF39F225C14A18008893B6 /* Main.storyboard */; };
@@ -15,6 +22,17 @@
 		AAFF3A0425C14A19008893B6 /* ITunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3A0325C14A19008893B6 /* ITunesSearchTests.swift */; };
 		AAFF3AB625C19976008893B6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AAFF3AB525C19976008893B6 /* Kingfisher */; };
 		AAFF3ABB25C199E3008893B6 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AAFF3ABA25C199E3008893B6 /* MBProgressHUD */; };
+		AAFF3AC525C19FFE008893B6 /* SearchFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3ABF25C19FFE008893B6 /* SearchFormPresenter.swift */; };
+		AAFF3AC625C19FFE008893B6 /* SearchFormWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC025C19FFE008893B6 /* SearchFormWorker.swift */; };
+		AAFF3AC725C19FFE008893B6 /* SearchFormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC125C19FFE008893B6 /* SearchFormRouter.swift */; };
+		AAFF3AC825C19FFE008893B6 /* SearchFormModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC225C19FFE008893B6 /* SearchFormModels.swift */; };
+		AAFF3ACA25C19FFE008893B6 /* SearchFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC425C19FFE008893B6 /* SearchFormInteractor.swift */; };
+		AAFF3AE725C1A90B008893B6 /* TableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AE625C1A90B008893B6 /* TableViewCellExtension.swift */; };
+		AAFF3AEB25C1AA2E008893B6 /* CollectionViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AEA25C1AA2D008893B6 /* CollectionViewCellExtension.swift */; };
+		AAFF3AEF25C1AA47008893B6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AEE25C1AA47008893B6 /* UIViewExtension.swift */; };
+		AAFF3AF325C1AA67008893B6 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AF225C1AA67008893B6 /* NSObjectExtension.swift */; };
+		AAFF3AFE25C1AD2F008893B6 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AFD25C1AD2F008893B6 /* ViewControllerExtension.swift */; };
+		AAFF3B0525C2040D008893B6 /* UIButtonWithRoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3B0425C2040D008893B6 /* UIButtonWithRoundCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA2D500625C20C0C002B7A94 /* UIViewWithRoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWithRoundCorners.swift; sourceTree = "<group>"; };
+		AA2D501025C21A9D002B7A94 /* MediaTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeCell.swift; sourceTree = "<group>"; };
+		AAB55A9925C2FB450054356C /* GenericMultiSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMultiSelectorVC.swift; sourceTree = "<group>"; };
+		AAB55AA325C314D20054356C /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		AAFF39E925C14A18008893B6 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFF39EC25C14A18008893B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFF39EE25C14A18008893B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +60,18 @@
 		AAFF39FF25C14A19008893B6 /* iTunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFF3A0325C14A19008893B6 /* ITunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesSearchTests.swift; sourceTree = "<group>"; };
 		AAFF3A0525C14A19008893B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFF3ABF25C19FFE008893B6 /* SearchFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormPresenter.swift; sourceTree = "<group>"; };
+		AAFF3AC025C19FFE008893B6 /* SearchFormWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormWorker.swift; sourceTree = "<group>"; };
+		AAFF3AC125C19FFE008893B6 /* SearchFormRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormRouter.swift; sourceTree = "<group>"; };
+		AAFF3AC225C19FFE008893B6 /* SearchFormModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormModels.swift; sourceTree = "<group>"; };
+		AAFF3AC325C19FFE008893B6 /* SearchFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
+		AAFF3AC425C19FFE008893B6 /* SearchFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormInteractor.swift; sourceTree = "<group>"; };
+		AAFF3AE625C1A90B008893B6 /* TableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellExtension.swift; sourceTree = "<group>"; };
+		AAFF3AEA25C1AA2D008893B6 /* CollectionViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellExtension.swift; sourceTree = "<group>"; };
+		AAFF3AEE25C1AA47008893B6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		AAFF3AF225C1AA67008893B6 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		AAFF3AFD25C1AD2F008893B6 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		AAFF3B0425C2040D008893B6 /* UIButtonWithRoundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithRoundCorners.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2D500C25C21768002B7A94 /* SCLAlertView in Frameworks */,
+				AAB55AB325C321F70054356C /* IQKeyboardManagerSwift in Frameworks */,
 				AAFF3ABB25C199E3008893B6 /* MBProgressHUD in Frameworks */,
 				AAFF3AB625C19976008893B6 /* Kingfisher in Frameworks */,
 			);
@@ -60,6 +96,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA2D500F25C21A6D002B7A94 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA2D501025C21A9D002B7A94 /* MediaTypeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AAB55A9825C2FB0B0054356C /* GenericMultiSelector */ = {
+			isa = PBXGroup;
+			children = (
+				AAB55A9925C2FB450054356C /* GenericMultiSelectorVC.swift */,
+			);
+			path = GenericMultiSelector;
+			sourceTree = "<group>";
+		};
+		AAB55AA725C314D80054356C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AAB55AA325C314D20054356C /* MediaType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AAFF39E025C14A18008893B6 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +167,9 @@
 		AAFF3A2825C15B74008893B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AAB55AA725C314D80054356C /* Models */,
+				AAFF3B0325C203CC008893B6 /* CustomViews */,
+				AAFF3AF625C1AC1B008893B6 /* Protocols */,
 				AAFF3A2A25C15B87008893B6 /* Extensions */,
 			);
 			path = Common;
@@ -115,6 +178,9 @@
 		AAFF3A2925C15B79008893B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AAFF3AD225C1A054008893B6 /* MediaDetails */,
+				AAFF3ACF25C1A002008893B6 /* SearchResults */,
+				AAFF3ABE25C19E61008893B6 /* SearchForm */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -122,6 +188,11 @@
 		AAFF3A2A25C15B87008893B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AAFF3AE625C1A90B008893B6 /* TableViewCellExtension.swift */,
+				AAFF3AEA25C1AA2D008893B6 /* CollectionViewCellExtension.swift */,
+				AAFF3AEE25C1AA47008893B6 /* UIViewExtension.swift */,
+				AAFF3AF225C1AA67008893B6 /* NSObjectExtension.swift */,
+				AAFF3AFD25C1AD2F008893B6 /* ViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -129,6 +200,7 @@
 		AAFF3A6325C18790008893B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AAFF3AD525C1A0AD008893B6 /* SearchForm */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -146,6 +218,58 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AAFF3ABE25C19E61008893B6 /* SearchForm */ = {
+			isa = PBXGroup;
+			children = (
+				AA2D500F25C21A6D002B7A94 /* Cells */,
+				AAFF3ABF25C19FFE008893B6 /* SearchFormPresenter.swift */,
+				AAFF3AC025C19FFE008893B6 /* SearchFormWorker.swift */,
+				AAFF3AC125C19FFE008893B6 /* SearchFormRouter.swift */,
+				AAFF3AC225C19FFE008893B6 /* SearchFormModels.swift */,
+				AAFF3AC325C19FFE008893B6 /* SearchFormViewController.swift */,
+				AAFF3AC425C19FFE008893B6 /* SearchFormInteractor.swift */,
+			);
+			path = SearchForm;
+			sourceTree = "<group>";
+		};
+		AAFF3ACF25C1A002008893B6 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		AAFF3AD225C1A054008893B6 /* MediaDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MediaDetails;
+			sourceTree = "<group>";
+		};
+		AAFF3AD525C1A0AD008893B6 /* SearchForm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchForm;
+			sourceTree = "<group>";
+		};
+		AAFF3AF625C1AC1B008893B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AAFF3B0325C203CC008893B6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AAB55A9825C2FB0B0054356C /* GenericMultiSelector */,
+				AAFF3B0425C2040D008893B6 /* UIButtonWithRoundCorners.swift */,
+				AA2D500625C20C0C002B7A94 /* UIViewWithRoundCorners.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +292,8 @@
 			packageProductDependencies = (
 				AAFF3AB525C19976008893B6 /* Kingfisher */,
 				AAFF3ABA25C199E3008893B6 /* MBProgressHUD */,
+				AA2D500B25C21768002B7A94 /* SCLAlertView */,
+				AAB55AB225C321F70054356C /* IQKeyboardManagerSwift */,
 			);
 			productName = iTunesSearch;
 			productReference = AAFF39E925C14A18008893B6 /* iTunesSearch.app */;
@@ -222,6 +348,8 @@
 			packageReferences = (
 				AAFF3AB425C19976008893B6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				AAFF3AB925C199E3008893B6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				AA2D500A25C21768002B7A94 /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */,
+				AAB55AB125C321F70054356C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = AAFF39EA25C14A18008893B6 /* Products */;
 			projectDirPath = "";
@@ -269,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -278,8 +406,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB55AA425C314D20054356C /* MediaType.swift in Sources */,
+				AA2D501125C21A9D002B7A94 /* MediaTypeCell.swift in Sources */,
+				AAB55AAE25C318310054356C /* SearchFormViewController.swift in Sources */,
+				AAB55A9A25C2FB450054356C /* GenericMultiSelectorVC.swift in Sources */,
+				AAFF3AFE25C1AD2F008893B6 /* ViewControllerExtension.swift in Sources */,
 				AAFF39ED25C14A18008893B6 /* AppDelegate.swift in Sources */,
+				AAFF3AC625C19FFE008893B6 /* SearchFormWorker.swift in Sources */,
+				AAFF3AEF25C1AA47008893B6 /* UIViewExtension.swift in Sources */,
+				AAFF3AE725C1A90B008893B6 /* TableViewCellExtension.swift in Sources */,
+				AAFF3ACA25C19FFE008893B6 /* SearchFormInteractor.swift in Sources */,
+				AAFF3AC725C19FFE008893B6 /* SearchFormRouter.swift in Sources */,
+				AAFF3AF325C1AA67008893B6 /* NSObjectExtension.swift in Sources */,
+				AAFF3B0525C2040D008893B6 /* UIButtonWithRoundCorners.swift in Sources */,
+				AAFF3AEB25C1AA2E008893B6 /* CollectionViewCellExtension.swift in Sources */,
+				AA2D500725C20C0C002B7A94 /* UIViewWithRoundCorners.swift in Sources */,
 				AAFF39EF25C14A18008893B6 /* SceneDelegate.swift in Sources */,
+				AAFF3AC525C19FFE008893B6 /* SearchFormPresenter.swift in Sources */,
+				AAFF3AC825C19FFE008893B6 /* SearchFormModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +698,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA2D500A25C21768002B7A94 /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vikmeup/SCLAlertView-Swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		AAB55AB125C321F70054356C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
 		AAFF3AB425C19976008893B6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -573,6 +733,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA2D500B25C21768002B7A94 /* SCLAlertView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA2D500A25C21768002B7A94 /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */;
+			productName = SCLAlertView;
+		};
+		AAB55AB225C321F70054356C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAB55AB125C321F70054356C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		AAFF3AB525C19976008893B6 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAFF3AB425C19976008893B6 /* XCRemoteSwiftPackageReference "Kingfisher" */;

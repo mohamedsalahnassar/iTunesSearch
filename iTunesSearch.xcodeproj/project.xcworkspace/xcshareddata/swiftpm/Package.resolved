@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "IQKeyboardManagerSwift",
+        "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager",
+        "state": {
+          "branch": null,
+          "revision": "4dc6bc7d1c9747bd0c261c8c055903f9fdef91f7",
+          "version": "6.5.6"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {
@@ -17,6 +26,15 @@
           "branch": null,
           "revision": "bca42b801100b2b3a4eda0ba8dd33d858c780b0d",
           "version": "1.2.0"
+        }
+      },
+      {
+        "package": "SCLAlertView",
+        "repositoryURL": "https://github.com/vikmeup/SCLAlertView-Swift",
+        "state": {
+          "branch": "master",
+          "revision": "f08ec93c299a221210e59462c84c79410050e5b7",
+          "version": null
         }
       }
     ]

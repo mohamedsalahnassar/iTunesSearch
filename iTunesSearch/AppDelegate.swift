@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // swiftlint:disable line_length
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        enableIQKeyboardManager()
         return true
+    }
+
+    func enableIQKeyboardManager() {
+        // enable IQKeyboardManager to avoid keyboard in all views
+        IQKeyboardManager.shared.enable = true
     }
 
     // MARK: UISceneSession Lifecycle
