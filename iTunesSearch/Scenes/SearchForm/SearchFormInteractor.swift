@@ -9,7 +9,6 @@
 import UIKit
 
 protocol SearchFormBusinessLogic {
-    func setInitialSelectedMediaTypes(request: SearchForm.SelectMediaTypes.Request)
     func search(request: SearchForm.Search.Request)
 }
 
@@ -21,12 +20,6 @@ class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
     var presenter: SearchFormPresentationLogic?
     var worker: SearchFormWorker?
     var selectedMediaTypes: [MediaType] = []
-
-    // MARK: Set Initial Selected Media Types
-    func setInitialSelectedMediaTypes(request: SearchForm.SelectMediaTypes.Request) {
-        selectedMediaTypes = [.Movie]
-        presenter?.displaySelectedMediaTypes(response: SearchForm.SelectMediaTypes.Response(selectedMediaTypes: [.Movie]))
-    }
 
     func search(request: SearchForm.Search.Request) {
         guard let searchTerm = request.searchTerm, !searchTerm.isEmpty else {
@@ -40,7 +33,7 @@ class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
         }
 
         presenter?.showLoadingIndicator()
-        worker = SearchFormWorker()
+        worker = SearchFormWorker(searchService: SearchAPIService())
         worker?.fetchResults(term: searchTerm, mediaTypes: request.mediaTypes, completion: {
             let response = SearchForm.Search.Response()
             self.presenter?.hideLoadingIndicator()

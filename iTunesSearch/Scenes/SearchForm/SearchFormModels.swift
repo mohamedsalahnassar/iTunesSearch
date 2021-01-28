@@ -12,13 +12,13 @@ enum SearchForm {
     // MARK: Use cases
     enum SelectMediaTypes {
         struct Request {
-            var selectedMediaTypes: [String]
+            var selectedMediaTypes: [MediaType]
         }
         struct Response {
             var selectedMediaTypes: [MediaType]
         }
         struct ViewModel {
-            var selectedMediaTypes: [String]
+            var selectedMediaTypes: [MediaType]
         }
     }
     enum Search {

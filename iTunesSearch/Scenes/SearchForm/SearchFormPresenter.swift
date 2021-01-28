@@ -22,7 +22,7 @@ class SearchFormPresenter: SearchFormPresentationLogic {
 
     // MARK: Display Selected Media Types
     func displaySelectedMediaTypes(response: SearchForm.SelectMediaTypes.Response) {
-        let viewModel = SearchForm.SelectMediaTypes.ViewModel(selectedMediaTypes: response.selectedMediaTypes.map(\.rawValue))
+        let viewModel = SearchForm.SelectMediaTypes.ViewModel(selectedMediaTypes: response.selectedMediaTypes)
         viewController?.displaySelectedMediaTypes(viewModel: viewModel)
     }
 

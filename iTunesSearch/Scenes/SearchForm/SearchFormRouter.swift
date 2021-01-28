@@ -8,8 +8,8 @@
 
 import UIKit
 
-@objc protocol SearchFormRoutingLogic {
-    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([String]) -> Void)
+protocol SearchFormRoutingLogic {
+    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaType]) -> Void)
     func navigateToSearchResultsView(segue: UIStoryboardSegue?)
 }
 
@@ -22,7 +22,7 @@ class SearchFormRouter: NSObject, SearchFormRoutingLogic, SearchFormDataPassing 
     var dataStore: SearchFormDataStore?
 
     // MARK: Routing
-    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([String]) -> Void) {
+    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaType]) -> Void) {
         let options = MediaType.allCases.map {
             GenericMultiSelectorVC<MediaType>.Option(
                 id: $0,
@@ -33,7 +33,7 @@ class SearchFormRouter: NSObject, SearchFormRoutingLogic, SearchFormDataPassing 
         let mediaTypesPickerVC = GenericMultiSelectorVC(options: options) { [weak self] (picker, options) in
             guard let self = self else { return }
             self.dataStore?.selectedMediaTypes = options.filter({$0.isSelected}).map({$0.id})
-            didUpdateSelectedMediaTypes(self.dataStore?.selectedMediaTypes.map({$0.rawValue}) ?? [])
+            didUpdateSelectedMediaTypes(self.dataStore?.selectedMediaTypes ?? [])
             picker.dismiss(animated: true)
         }
         mediaTypesPickerVC.title = "Select Media Types"

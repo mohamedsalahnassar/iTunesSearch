@@ -56,16 +56,13 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setInitialSelectedMediaType()
     }
 
     // MARK: Search iTunes
     @IBOutlet weak var searchKeywordsTextField: UITextField!
 
     @IBAction func didTapSubmitButton(_ sender: Any) {
-        let currentMediaTypes = displayedMediaTypes.compactMap({MediaType(rawValue: $0)})
-        interactor?.search(request: SearchForm.Search.Request(searchTerm: searchKeywordsTextField.text, mediaTypes: currentMediaTypes)
-        )
+        interactor?.search(request: SearchForm.Search.Request(searchTerm: searchKeywordsTextField.text, mediaTypes: displayedMediaTypes))
     }
 
     // MARK: Select Media Types
@@ -79,14 +76,8 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
         })
     }
 
-    // MARK: Set Initial Selected Media Type
-    func setInitialSelectedMediaType() {
-        let request = SearchForm.SelectMediaTypes.Request(selectedMediaTypes: displayedMediaTypes)
-        interactor?.setInitialSelectedMediaTypes(request: request)
-    }
-
     // MARK: Display Selected Media Types
-    var displayedMediaTypes: [String] = []
+    var displayedMediaTypes: [MediaType] = []
 
     func displaySelectedMediaTypes(viewModel: SearchForm.SelectMediaTypes.ViewModel) {
         displayedMediaTypes = viewModel.selectedMediaTypes
@@ -124,7 +115,7 @@ extension SearchFormViewController: UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MediaTypeCell.reuseIdentifier, for: indexPath) as! MediaTypeCell
-        cell.title.text = displayedMediaTypes[indexPath.row]
+        cell.title.text = displayedMediaTypes[indexPath.row].description
         return cell
     }
 

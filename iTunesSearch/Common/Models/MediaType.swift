@@ -9,10 +9,18 @@
 import Foundation
 
 enum MediaType: String, CaseIterable, CustomStringConvertible {
-    case Album, Artist, Book, Movie, Podcast, Song
-    case MusicVideo = "Music Video"
+    case movie, album, allArtist, audiobook, podcast, allTrack, musicVideo, tvSeason
 
     var description: String {
-        return rawValue
+        switch self {
+        case .movie: return "Movie"
+        case .album: return "Album"
+        case .allArtist: return "Artist"
+        case .audiobook: return "Book"
+        case .podcast: return "Podcast"
+        case .allTrack: return "Music"
+        case .musicVideo: return "Music Video"
+        case .tvSeason: return "TV Season"
+        }
     }
 }
