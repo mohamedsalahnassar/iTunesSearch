@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GLI-6S-WLv">
-                                <rect key="frame" x="40" y="64" width="334" height="577.5"/>
+                                <rect key="frame" x="40" y="64" width="334" height="602.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxI-6h-J6d" userLabel="HeaderContainerView">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="120"/>
@@ -94,7 +94,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qCD-H3-Epj">
-                                        <rect key="frame" x="0.0" y="326.5" width="334" height="181"/>
+                                        <rect key="frame" x="0.0" y="326.5" width="334" height="206"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specify the parameter for the content to be searched" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdY-rK-acB">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="36"/>
@@ -103,13 +103,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8p4-J0-NQr">
-                                                <rect key="frame" x="0.0" y="46" width="334" height="135"/>
+                                                <rect key="frame" x="0.0" y="46" width="334" height="160"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmy-fC-Rhz" customClass="UIViewWithRoundCorners" customModule="iTunesSearch" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="135"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="160"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-cX-dDL">
-                                                                <rect key="frame" x="10" y="10" width="314" height="115"/>
+                                                                <rect key="frame" x="10" y="10" width="314" height="140"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cH9-jo-egu">
                                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
@@ -140,10 +140,10 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-hp-USU">
-                                                                        <rect key="frame" x="0.0" y="40" width="314" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="40" width="314" height="100"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="75" id="0jM-BA-fzk"/>
+                                                                            <constraint firstAttribute="height" constant="100" id="0jM-BA-fzk"/>
                                                                         </constraints>
                                                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="uas-3D-z7T">
                                                                             <size key="itemSize" width="70" height="24"/>
@@ -224,7 +224,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DN-dF-SsD" customClass="UIButtonWithRoundCorners" customModule="iTunesSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="537.5" width="334" height="40"/>
+                                        <rect key="frame" x="0.0" y="562.5" width="334" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="hH5-JE-Lz5"/>

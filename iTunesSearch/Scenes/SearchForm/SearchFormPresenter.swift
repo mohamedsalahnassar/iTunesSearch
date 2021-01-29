@@ -10,7 +10,7 @@ import UIKit
 
 protocol SearchFormPresentationLogic {
     func displaySelectedMediaTypes(response: SearchForm.SelectMediaTypes.Response)
-    func showResultsView(response: SearchForm.Search.Response)
+    func showResultsView()
     func showInfoAlert(response: SearchForm.Search.Response.Error)
     func showErrorAlert(response: SearchForm.Search.Response.Error)
     func showLoadingIndicator()
@@ -20,14 +20,14 @@ protocol SearchFormPresentationLogic {
 class SearchFormPresenter: SearchFormPresentationLogic {
     weak var viewController: SearchFormDisplayLogic?
 
-    // MARK: Display Selected Media Types
+    // MARK: Display Selected Media Type Entities
     func displaySelectedMediaTypes(response: SearchForm.SelectMediaTypes.Response) {
         let viewModel = SearchForm.SelectMediaTypes.ViewModel(selectedMediaTypes: response.selectedMediaTypes)
         viewController?.displaySelectedMediaTypes(viewModel: viewModel)
     }
 
-    func showResultsView(response: SearchForm.Search.Response) {
-        print(#file, #function)
+    func showResultsView() {
+        viewController?.showSearchResultsView()
     }
 
     func showInfoAlert(response: SearchForm.Search.Response.Error) {

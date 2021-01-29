@@ -1,5 +1,5 @@
 //
-//  MediaType.swift
+//  MediaTypeEntity.swift
 //  iTunesSearch
 //
 //  Created by Mohamed Nassar on 28/01/2021.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MediaType: String, CaseIterable, CustomStringConvertible {
+enum MediaTypeEntity: String, CaseIterable, CustomStringConvertible {
     case movie, album, allArtist, audiobook, podcast, allTrack, musicVideo, tvSeason
 
     var description: String {

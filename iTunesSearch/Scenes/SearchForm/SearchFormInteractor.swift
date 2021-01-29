@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import Networking
 
 protocol SearchFormBusinessLogic {
     func search(request: SearchForm.Search.Request)
 }
 
 protocol SearchFormDataStore {
-     var selectedMediaTypes: [MediaType] { get set }
+    var selectedMediaTypes: [MediaTypeEntity] { get set }
+    var fetchedResults: [(MediaTypeEntity, [ItunesMedia])] { get set }
 }
 
 class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
     var presenter: SearchFormPresentationLogic?
     var worker: SearchFormWorker?
-    var selectedMediaTypes: [MediaType] = []
+    var selectedMediaTypes: [MediaTypeEntity] = []
+    var fetchedResults: [(MediaTypeEntity, [ItunesMedia])] = []
 
     func search(request: SearchForm.Search.Request) {
         guard let searchTerm = request.searchTerm, !searchTerm.isEmpty else {
@@ -34,10 +37,18 @@ class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
 
         presenter?.showLoadingIndicator()
         worker = SearchFormWorker(searchService: SearchAPIService())
-        worker?.fetchResults(term: searchTerm, mediaTypes: request.mediaTypes, completion: {
-            let response = SearchForm.Search.Response()
-            self.presenter?.hideLoadingIndicator()
-            self.presenter?.showResultsView(response: response)
+        worker?.fetchResults(term: searchTerm, for: request.mediaTypes, completionHandler: { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case .failure(let error):
+                let response = SearchForm.Search.Response.Error(title: "error", message: error.localizedDescription)
+                self.presenter?.hideLoadingIndicator()
+                self.presenter?.showErrorAlert(response: response)
+            case .success(let mediaResults):
+                self.fetchedResults = mediaResults
+                self.presenter?.hideLoadingIndicator()
+                self.presenter?.showResultsView()
+            }
         })
     }
 }

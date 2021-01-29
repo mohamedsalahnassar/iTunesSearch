@@ -12,19 +12,19 @@ enum SearchForm {
     // MARK: Use cases
     enum SelectMediaTypes {
         struct Request {
-            var selectedMediaTypes: [MediaType]
+            var selectedMediaTypes: [MediaTypeEntity]
         }
         struct Response {
-            var selectedMediaTypes: [MediaType]
+            var selectedMediaTypes: [MediaTypeEntity]
         }
         struct ViewModel {
-            var selectedMediaTypes: [MediaType]
+            var selectedMediaTypes: [MediaTypeEntity]
         }
     }
     enum Search {
         struct Request {
             var searchTerm: String?
-            var mediaTypes: [MediaType]
+            var mediaTypes: [MediaTypeEntity]
         }
         struct Response {
             struct Error {
@@ -33,6 +33,22 @@ enum SearchForm {
             }
         }
         struct ViewModel {
+            struct Media {
+                let collectionName: String?
+                let artistName: String?
+                let shortDescription: String?
+                let longDescription: String?
+                let primaryGenreName: String?
+                let trackName: String?
+                let trackCensoredName: String?
+
+                let artworkUrl30: URL?
+                let artworkUrl60: URL?
+                let artworkUrl100: URL?
+                let previewURL: String?
+            }
+
+            let mediaResults: [(String, [ViewModel.Media])]
         }
     }
 }

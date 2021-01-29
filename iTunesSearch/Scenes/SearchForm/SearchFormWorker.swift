@@ -7,20 +7,47 @@
 //
 
 import UIKit
+import Combine
 
 class SearchFormWorker {
     let searchService: SearchService
+    var cancellable: Set<AnyCancellable> = []
 
     internal init(searchService: SearchService) {
         self.searchService = searchService
     }
 
-    func fetchResults(term: String, mediaTypes: [MediaType], completion: @escaping () -> Void) {
-        for mediaType in mediaTypes {
-            searchService.search(term: term, entity: mediaType.rawValue)
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            completion()
-        }
+    func fetchResults(term: String, for mediaTypes: [MediaTypeEntity], completionHandler: @escaping (Result<[(MediaTypeEntity, [ItunesMedia])], Error>) -> Void) {
+
+        fetchResults(term: term, for: mediaTypes)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { (completion) in
+                switch completion {
+                case .finished: break
+                case .failure(let error):
+                    completionHandler(.failure(error))
+                }
+            }, receiveValue: { (results) in
+                completionHandler(.success(results))
+            })
+            .store(in: &cancellable)
     }
+
+    private func fetchResults(term: String, for mediaTypes: [MediaTypeEntity]) -> AnyPublisher<[(MediaTypeEntity, [ItunesMedia])], Error> {
+        mediaTypes.publisher
+            .flatMap({ self.fetchResult(term: term, for: $0) })
+            .collect()
+            .eraseToAnyPublisher()
+
+    }
+
+    private func fetchResult(term: String, for mediaType: MediaTypeEntity) -> AnyPublisher<(MediaTypeEntity, [ItunesMedia]), Error> {
+        searchService.search(term: term, entity: mediaType.rawValue)
+            .subscribe(on: DispatchQueue.global(qos: .userInitiated))
+            .map(\.results)
+            .replaceNil(with: [])
+            .map({(mediaType, $0)})
+            .eraseToAnyPublisher()
+    }
+
 }

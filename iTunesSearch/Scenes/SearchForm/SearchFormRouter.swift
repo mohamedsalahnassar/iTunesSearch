@@ -9,8 +9,8 @@
 import UIKit
 
 protocol SearchFormRoutingLogic {
-    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaType]) -> Void)
-    func navigateToSearchResultsView(segue: UIStoryboardSegue?)
+    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaTypeEntity]) -> Void)
+    func routeToSearchResultsView()
 }
 
 protocol SearchFormDataPassing {
@@ -22,9 +22,23 @@ class SearchFormRouter: NSObject, SearchFormRoutingLogic, SearchFormDataPassing 
     var dataStore: SearchFormDataStore?
 
     // MARK: Routing
-    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaType]) -> Void) {
-        let options = MediaType.allCases.map {
-            GenericMultiSelectorVC<MediaType>.Option(
+
+    func routeToSearchResultsView() {
+        print(#file, #function)
+        print("--------------------------[START RESULTS]------------------------------")
+        print(dataStore?.fetchedResults as Any)
+        print("--------------------------[END RESULTS]------------------------------")
+
+//        let destinationVC = viewController?.storyboard?.instantiateViewController(withIdentifier: "CreateOrderViewController") as! CreateOrderViewController
+//        var destinationDS = destinationVC.router!.dataStore!
+//        passDataToEditOrder(source: dataStore!, destination: &destinationDS)
+//        navigateToEditOrder(source: viewController!, destination: destinationVC)
+    }
+
+    // MARK: Navigation
+    func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaTypeEntity]) -> Void) {
+        let options = MediaTypeEntity.allCases.map {
+            GenericMultiSelectorVC<MediaTypeEntity>.Option(
                 id: $0,
                 isSelected: dataStore?.selectedMediaTypes.contains($0) ?? false
             )
@@ -42,8 +56,12 @@ class SearchFormRouter: NSObject, SearchFormRoutingLogic, SearchFormDataPassing 
         viewController?.present(navigationController, animated: true, completion: nil)
     }
 
-    func navigateToSearchResultsView(segue: UIStoryboardSegue?) {
-
-    }
-
+//    private func navigateToEditOrder(source: ShowOrderViewController, destination: CreateOrderViewController) {
+//      source.present(destination, animated: true, completion: nil)
+//    }
+//
+//    // MARK: Passing data
+//    private func passDataToEditOrder(source: ShowOrderDataStore, destination: inout CreateOrderDataStore) {
+//      destination.orderToEdit = source.order
+//    }
 }

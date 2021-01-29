@@ -11,6 +11,7 @@ import SCLAlertView
 
 protocol SearchFormDisplayLogic: class {
     func displaySelectedMediaTypes(viewModel: SearchForm.SelectMediaTypes.ViewModel)
+    func showSearchResultsView()
     func showErrorAlert(title: String, message: String)
     func showInfoAlert(title: String, message: String)
     func showLoadingIndicator()
@@ -65,7 +66,7 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
         interactor?.search(request: SearchForm.Search.Request(searchTerm: searchKeywordsTextField.text, mediaTypes: displayedMediaTypes))
     }
 
-    // MARK: Select Media Types
+    // MARK: Select Media Types Entities
     @IBOutlet weak var selectedMediaTypeCollectionView: UICollectionView!
 
     @IBAction func didTapSelectMediaTypesButton(_ sender: UIButton) {
@@ -76,12 +77,17 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
         })
     }
 
-    // MARK: Display Selected Media Types
-    var displayedMediaTypes: [MediaType] = []
+    // MARK: Display Selected Media Types Entities
+    var displayedMediaTypes: [MediaTypeEntity] = []
 
     func displaySelectedMediaTypes(viewModel: SearchForm.SelectMediaTypes.ViewModel) {
         displayedMediaTypes = viewModel.selectedMediaTypes
         selectedMediaTypeCollectionView.reloadData()
+    }
+
+    // MARK: - Show Search Results View
+    func showSearchResultsView() {
+        router?.routeToSearchResultsView()
     }
 
     // MARK: Error handling
