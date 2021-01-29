@@ -13,6 +13,7 @@ import Networking
 struct ItunesMedia: Codable {
     let collectionName: String?
     let artistName: String?
+    let artistType: String?
     let shortDescription: String?
     let longDescription: String?
     let primaryGenreName: String?
@@ -22,5 +23,5 @@ struct ItunesMedia: Codable {
     let artworkUrl30: URL?
     let artworkUrl60: URL?
     let artworkUrl100: URL?
-    let previewURL: String?
+    let previewURL: URL?
 }

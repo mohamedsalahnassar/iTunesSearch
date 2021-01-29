@@ -22,8 +22,13 @@ enum MediaItems {
                     let image: URL?
 
                     init(from itunesMedia: ItunesMedia) {
-                        self.title = itunesMedia.collectionName ?? itunesMedia.trackName ?? itunesMedia.trackCensoredName ?? "No Title"
-                        self.subtitle = itunesMedia.artistName
+                        if itunesMedia.collectionName == nil && itunesMedia.trackName == nil && itunesMedia.trackCensoredName == nil {
+                            self.title = itunesMedia.artistName ?? "No Title"
+                            self.subtitle = itunesMedia.artistType
+                        } else {
+                            self.title = itunesMedia.collectionName ?? itunesMedia.trackName ?? itunesMedia.trackCensoredName ?? "No Title"
+                            self.subtitle = itunesMedia.artistName
+                        }
                         self.image = itunesMedia.artworkUrl100
                     }
                 }
