@@ -11,7 +11,7 @@ import SCLAlertView
 
 protocol SearchFormDisplayLogic: class {
     func displaySelectedMediaTypes(viewModel: SearchForm.SelectMediaTypes.ViewModel)
-    func showSearchResultsView()
+    func showSearchResultsView(fetchedData: [(MediaTypeEntity, [ItunesMedia])])
     func showErrorAlert(title: String, message: String)
     func showInfoAlert(title: String, message: String)
     func showLoadingIndicator()
@@ -47,16 +47,22 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
         router.dataStore = interactor
     }
 
-    private func setupUI() {
-        selectedMediaTypeCollectionView.delegate = self
-        selectedMediaTypeCollectionView.dataSource = self
-        searchKeywordsTextField.delegate = self
-    }
-
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    private func setupUI() {
+        selectedMediaTypeCollectionView.delegate = self
+        selectedMediaTypeCollectionView.dataSource = self
+        selectedMediaTypeCollectionView.register(MediaTypeCell.nib, forCellWithReuseIdentifier: MediaTypeCell.reuseIdentifier)
+        searchKeywordsTextField.delegate = self
     }
 
     // MARK: Search iTunes
@@ -86,8 +92,8 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
     }
 
     // MARK: - Show Search Results View
-    func showSearchResultsView() {
-        router?.routeToSearchResultsView()
+    func showSearchResultsView(fetchedData: [(MediaTypeEntity, [ItunesMedia])]) {
+        router?.routeToSearchResultsView(fetchedData: fetchedData)
     }
 
     // MARK: Error handling

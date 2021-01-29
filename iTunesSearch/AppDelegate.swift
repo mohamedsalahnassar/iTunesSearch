@@ -17,13 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func enableIQKeyboardManager() {
+    private func enableIQKeyboardManager() {
         // enable IQKeyboardManager to avoid keyboard in all views
         IQKeyboardManager.shared.enable = true
-    }
-
-    // MARK: UISceneSession Lifecycle
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 }

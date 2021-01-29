@@ -31,24 +31,7 @@ enum SearchForm {
                 let title: String
                 let message: String
             }
-        }
-        struct ViewModel {
-            struct Media {
-                let collectionName: String?
-                let artistName: String?
-                let shortDescription: String?
-                let longDescription: String?
-                let primaryGenreName: String?
-                let trackName: String?
-                let trackCensoredName: String?
-
-                let artworkUrl30: URL?
-                let artworkUrl60: URL?
-                let artworkUrl100: URL?
-                let previewURL: String?
-            }
-
-            let mediaResults: [(String, [ViewModel.Media])]
+            var itunesMediaItems: [(MediaTypeEntity, [ItunesMedia])]
         }
     }
 }

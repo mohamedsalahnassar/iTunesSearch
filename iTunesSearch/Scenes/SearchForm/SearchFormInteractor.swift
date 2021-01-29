@@ -15,14 +15,12 @@ protocol SearchFormBusinessLogic {
 
 protocol SearchFormDataStore {
     var selectedMediaTypes: [MediaTypeEntity] { get set }
-    var fetchedResults: [(MediaTypeEntity, [ItunesMedia])] { get set }
 }
 
 class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
     var presenter: SearchFormPresentationLogic?
     var worker: SearchFormWorker?
     var selectedMediaTypes: [MediaTypeEntity] = []
-    var fetchedResults: [(MediaTypeEntity, [ItunesMedia])] = []
 
     func search(request: SearchForm.Search.Request) {
         guard let searchTerm = request.searchTerm, !searchTerm.isEmpty else {
@@ -45,9 +43,9 @@ class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
                 self.presenter?.hideLoadingIndicator()
                 self.presenter?.showErrorAlert(response: response)
             case .success(let mediaResults):
-                self.fetchedResults = mediaResults
                 self.presenter?.hideLoadingIndicator()
-                self.presenter?.showResultsView()
+                let response = SearchForm.Search.Response(itunesMediaItems: mediaResults)
+                self.presenter?.showResultsView(response: response)
             }
         })
     }

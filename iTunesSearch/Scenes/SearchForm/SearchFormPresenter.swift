@@ -10,7 +10,7 @@ import UIKit
 
 protocol SearchFormPresentationLogic {
     func displaySelectedMediaTypes(response: SearchForm.SelectMediaTypes.Response)
-    func showResultsView()
+    func showResultsView(response: SearchForm.Search.Response)
     func showInfoAlert(response: SearchForm.Search.Response.Error)
     func showErrorAlert(response: SearchForm.Search.Response.Error)
     func showLoadingIndicator()
@@ -26,8 +26,8 @@ class SearchFormPresenter: SearchFormPresentationLogic {
         viewController?.displaySelectedMediaTypes(viewModel: viewModel)
     }
 
-    func showResultsView() {
-        viewController?.showSearchResultsView()
+    func showResultsView(response: SearchForm.Search.Response) {
+        viewController?.showSearchResultsView(fetchedData: response.itunesMediaItems)
     }
 
     func showInfoAlert(response: SearchForm.Search.Response.Error) {

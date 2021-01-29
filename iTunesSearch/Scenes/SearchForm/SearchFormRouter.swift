@@ -10,7 +10,7 @@ import UIKit
 
 protocol SearchFormRoutingLogic {
     func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaTypeEntity]) -> Void)
-    func routeToSearchResultsView()
+    func routeToSearchResultsView(fetchedData: [(MediaTypeEntity, [ItunesMedia])])
 }
 
 protocol SearchFormDataPassing {
@@ -23,16 +23,9 @@ class SearchFormRouter: NSObject, SearchFormRoutingLogic, SearchFormDataPassing 
 
     // MARK: Routing
 
-    func routeToSearchResultsView() {
-        print(#file, #function)
-        print("--------------------------[START RESULTS]------------------------------")
-        print(dataStore?.fetchedResults as Any)
-        print("--------------------------[END RESULTS]------------------------------")
-
-//        let destinationVC = viewController?.storyboard?.instantiateViewController(withIdentifier: "CreateOrderViewController") as! CreateOrderViewController
-//        var destinationDS = destinationVC.router!.dataStore!
-//        passDataToEditOrder(source: dataStore!, destination: &destinationDS)
-//        navigateToEditOrder(source: viewController!, destination: destinationVC)
+    func routeToSearchResultsView(fetchedData: [(MediaTypeEntity, [ItunesMedia])]) {
+        let destinationVC = MediaItemsViewController(itemsToDisplay: fetchedData)
+        viewController?.show(destinationVC, sender: nil)
     }
 
     // MARK: Navigation
@@ -55,13 +48,4 @@ class SearchFormRouter: NSObject, SearchFormRoutingLogic, SearchFormDataPassing 
         navigationController.navigationBar.prefersLargeTitles = false
         viewController?.present(navigationController, animated: true, completion: nil)
     }
-
-//    private func navigateToEditOrder(source: ShowOrderViewController, destination: CreateOrderViewController) {
-//      source.present(destination, animated: true, completion: nil)
-//    }
-//
-//    // MARK: Passing data
-//    private func passDataToEditOrder(source: ShowOrderDataStore, destination: inout CreateOrderDataStore) {
-//      destination.orderToEdit = source.order
-//    }
 }
