@@ -55,7 +55,6 @@ class MediaItemDetailsViewController: UIViewController, MediaItemDetailsDisplayL
     // MARK: Display Media Item
     @IBOutlet private var itemTitle: UILabel!
     @IBOutlet private var itemSubtitle: UILabel!
-    @IBOutlet private var shortDescription: UILabel!
     @IBOutlet private var longDescription: UILabel!
     @IBOutlet private var posterImage: UIImageView!
     @IBOutlet private var backgroundImage: UIImageView!
@@ -73,7 +72,6 @@ class MediaItemDetailsViewController: UIViewController, MediaItemDetailsDisplayL
     func displayItemDetails(viewModel: MediaItemDetails.displayMediaItem.ViewModel) {
         self.itemTitle.text = viewModel.title
         self.itemSubtitle.text = viewModel.subtitle
-        self.shortDescription.text = viewModel.shortDescription
         self.longDescription.text = viewModel.longDescription
         self.posterImage.load(url: viewModel.image, placeholder: UIImage(named: "No-Image-Placeholder"))
         self.backgroundImage.load(url: viewModel.image, placeholder: UIImage(named: "No-Image-Placeholder"))
