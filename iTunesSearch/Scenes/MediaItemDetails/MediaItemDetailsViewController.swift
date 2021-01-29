@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 protocol MediaItemDetailsDisplayLogic: class {
     func displayItemDetails(viewModel: MediaItemDetails.displayMediaItem.ViewModel)
@@ -61,7 +62,8 @@ class MediaItemDetailsViewController: UIViewController, MediaItemDetailsDisplayL
     @IBOutlet private var playPreviewButton: UIButton!
 
     @IBAction func didTapPlayPreviewVideo(_ sender: UIButton) {
-
+        guard let previewLink = router?.dataStore?.itunesMedia.previewUrl else { return }
+        router?.presentVideoPlayer(using: previewLink)
     }
 
     func getItemDetails() {

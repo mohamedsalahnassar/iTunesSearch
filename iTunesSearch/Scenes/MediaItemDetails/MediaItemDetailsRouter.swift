@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVKit
 
 @objc protocol MediaItemDetailsRoutingLogic {
-    // func routeToSomewhere(segue: UIStoryboardSegue?)
+    func presentVideoPlayer(using url: URL)
 }
 
 protocol MediaItemDetailsDataPassing {
@@ -19,4 +20,14 @@ protocol MediaItemDetailsDataPassing {
 class MediaItemDetailsRouter: NSObject, MediaItemDetailsRoutingLogic, MediaItemDetailsDataPassing {
     weak var viewController: MediaItemDetailsViewController?
     var dataStore: MediaItemDetailsDataStore?
+
+    func presentVideoPlayer(using url: URL) {
+        let player = AVPlayer(url: url)
+        let playerVC = AVPlayerViewController()
+        playerVC.entersFullScreenWhenPlaybackBegins = true
+        playerVC.player = player
+        viewController?.present(playerVC, animated: true, completion: {
+            player.play()
+        })
+    }
 }
