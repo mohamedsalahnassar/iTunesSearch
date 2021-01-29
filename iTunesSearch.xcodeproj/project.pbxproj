@@ -35,6 +35,8 @@
 		AAC6387725C440290058EBE1 /* MediaItemListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC6387525C440290058EBE1 /* MediaItemListCell.xib */; };
 		AAC6387B25C443F00058EBE1 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6387A25C443F00058EBE1 /* UIImageViewExtension.swift */; };
 		AAC6388425C449650058EBE1 /* MediaItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6383725C413A70058EBE1 /* MediaItemsViewController.swift */; };
+		AAC6389125C458DA0058EBE1 /* MediaSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6388F25C458DA0058EBE1 /* MediaSectionHeaderView.swift */; };
+		AAC6389225C458DA0058EBE1 /* MediaSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC6389025C458DA0058EBE1 /* MediaSectionHeaderView.xib */; };
 		AAFF39ED25C14A18008893B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF39EC25C14A18008893B6 /* AppDelegate.swift */; };
 		AAFF39EF25C14A18008893B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF39EE25C14A18008893B6 /* SceneDelegate.swift */; };
 		AAFF39F625C14A19008893B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFF39F525C14A19008893B6 /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		AAC6387425C440290058EBE1 /* MediaItemListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemListCell.swift; sourceTree = "<group>"; };
 		AAC6387525C440290058EBE1 /* MediaItemListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaItemListCell.xib; sourceTree = "<group>"; };
 		AAC6387A25C443F00058EBE1 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		AAC6388F25C458DA0058EBE1 /* MediaSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSectionHeaderView.swift; sourceTree = "<group>"; };
+		AAC6389025C458DA0058EBE1 /* MediaSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaSectionHeaderView.xib; sourceTree = "<group>"; };
 		AAFF39E925C14A18008893B6 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFF39EC25C14A18008893B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFF39EE25C14A18008893B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 				AAC6386B25C43FED0058EBE1 /* MediaItemGridCell.xib */,
 				AAC6387425C440290058EBE1 /* MediaItemListCell.swift */,
 				AAC6387525C440290058EBE1 /* MediaItemListCell.xib */,
+				AAC6388F25C458DA0058EBE1 /* MediaSectionHeaderView.swift */,
+				AAC6389025C458DA0058EBE1 /* MediaSectionHeaderView.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				AAFF39F925C14A19008893B6 /* LaunchScreen.storyboard in Resources */,
 				AAC6386D25C43FED0058EBE1 /* MediaItemGridCell.xib in Resources */,
 				AAC6385425C4358F0058EBE1 /* MediaTypeCell.xib in Resources */,
+				AAC6389225C458DA0058EBE1 /* MediaSectionHeaderView.xib in Resources */,
 				AAC6387725C440290058EBE1 /* MediaItemListCell.xib in Resources */,
 				AAFF39F625C14A19008893B6 /* Assets.xcassets in Resources */,
 				AAC6384625C41E870058EBE1 /* MediaItemsViewController.xib in Resources */,
@@ -513,6 +520,7 @@
 				AAFF3AF325C1AA67008893B6 /* NSObjectExtension.swift in Sources */,
 				AAFF3B0525C2040D008893B6 /* UIButtonWithRoundCorners.swift in Sources */,
 				AAB55AD525C346850054356C /* ItunesMedia.swift in Sources */,
+				AAC6389125C458DA0058EBE1 /* MediaSectionHeaderView.swift in Sources */,
 				AAFF3AEB25C1AA2E008893B6 /* CollectionViewCellExtension.swift in Sources */,
 				AA2D500725C20C0C002B7A94 /* UIViewWithRoundCorners.swift in Sources */,
 				AAC6383925C413A70058EBE1 /* MediaItemsPresenter.swift in Sources */,

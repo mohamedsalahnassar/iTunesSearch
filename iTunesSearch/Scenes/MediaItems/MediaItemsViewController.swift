@@ -69,6 +69,7 @@ class MediaItemsViewController: UIViewController, MediaItemsDisplayLogic {
         setNavigationItemButton()
         collectionView.register(MediaItemGridCell.nib, forCellWithReuseIdentifier: MediaItemGridCell.reuseIdentifier)
         collectionView.register(MediaItemListCell.nib, forCellWithReuseIdentifier: MediaItemListCell.reuseIdentifier)
+        collectionView.register(MediaSectionHeaderView.nib, forSupplementaryViewOfKind: "HeaderView", withReuseIdentifier: MediaSectionHeaderView.className)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -134,6 +135,15 @@ extension MediaItemsViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
 
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: "HeaderView", withReuseIdentifier: MediaSectionHeaderView.className, for: indexPath) as! MediaSectionHeaderView
+        headerView.configureHeader(with: displayedMediaItemsSections[indexPath.section].title)
+        return headerView
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        router.navigateToResultDetails(model: viewModels[indexPath.section].resulsts[indexPath.row])
+    }
 }
 
 extension MediaItemsViewController: UICollectionViewDelegateFlowLayout {
