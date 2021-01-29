@@ -23,5 +23,5 @@ struct ItunesMedia: Codable {
     let artworkUrl30: URL?
     let artworkUrl60: URL?
     let artworkUrl100: URL?
-    let previewURL: URL?
+    let previewUrl: URL?
 }

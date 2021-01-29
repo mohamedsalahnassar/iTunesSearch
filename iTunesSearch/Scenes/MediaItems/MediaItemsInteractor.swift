@@ -20,7 +20,7 @@ class MediaItemsInteractor: MediaItemsBusinessLogic, MediaItemsDataStore {
     var presenter: MediaItemsPresentationLogic?
     var mediaItems: [(MediaTypeEntity, [ItunesMedia])] = []
 
-    // MARK: Do something
+    // MARK: Get Media Items
     func getMediaItems() {
         let response = MediaItems.getMediaItems.Response(mediaItems: mediaItems)
         presenter?.presentMediaItems(response: response)

@@ -142,7 +142,7 @@ extension MediaItemsViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        router.navigateToResultDetails(model: viewModels[indexPath.section].resulsts[indexPath.row])
+        router?.routeToItemDetailsView(forItemAt: indexPath)
     }
 }
 
