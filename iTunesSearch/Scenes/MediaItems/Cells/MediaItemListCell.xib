@@ -23,7 +23,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZ1-1U-tSb">
                                 <rect key="frame" x="0.0" y="0.0" width="559" height="192"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ujG-j2-cyd">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ujG-j2-cyd">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="192"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="p7d-mc-BVs"/>
@@ -92,7 +92,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="No-Image-Placeholder" width="330" height="407"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

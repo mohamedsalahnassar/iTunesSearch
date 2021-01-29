@@ -29,7 +29,7 @@ enum MediaItems {
                             self.title = itunesMedia.collectionName ?? itunesMedia.trackName ?? itunesMedia.trackCensoredName ?? "No Title"
                             self.subtitle = itunesMedia.artistName
                         }
-                        self.image = itunesMedia.artworkUrl100
+                        self.image = itunesMedia.artworkUrl250
                     }
                 }
                 let title: String

@@ -20,7 +20,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-wm-cf3" customClass="UIViewWithRoundCorners" customModule="iTunesSearch" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="276" height="413"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8VD-uA-okB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8VD-uA-okB">
                                 <rect key="frame" x="0.0" y="0.0" width="276" height="413"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-hw-n4N">
@@ -96,7 +96,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="No-Image-Placeholder" width="330" height="407"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

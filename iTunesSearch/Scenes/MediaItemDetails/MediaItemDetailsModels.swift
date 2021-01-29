@@ -30,7 +30,7 @@ enum MediaItemDetails {
                     self.title = itunesMedia.collectionName ?? itunesMedia.trackName ?? itunesMedia.trackCensoredName ?? "No Title"
                     self.subtitle = itunesMedia.artistName
                 }
-                self.image = itunesMedia.artworkUrl100
+                self.image = itunesMedia.artworkUrl250
                 self.shortDescription = itunesMedia.shortDescription
                 self.longDescription = itunesMedia.longDescription
                 self.previewURL = itunesMedia.previewUrl

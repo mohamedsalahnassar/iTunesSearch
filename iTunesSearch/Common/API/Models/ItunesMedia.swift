@@ -24,4 +24,11 @@ struct ItunesMedia: Codable {
     let artworkUrl60: URL?
     let artworkUrl100: URL?
     let previewUrl: URL?
+    var artworkUrl250: URL? {
+        if let urlString = artworkUrl100?.absoluteString {
+            let replacedString = urlString.replacingOccurrences(of: "100x100", with: "250x250")
+            return URL(string: replacedString)
+        }
+        return nil
+    }
 }
