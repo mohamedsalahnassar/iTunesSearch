@@ -19,6 +19,7 @@
 		AA718A1C25C484EC0029EA90 /* SearchFormPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A1825C484EC0029EA90 /* SearchFormPresenterTests.swift */; };
 		AA718A2525C488930029EA90 /* SearchFormViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A1525C484EC0029EA90 /* SearchFormViewControllerTests.swift */; };
 		AA718A2C25C49C3F0029EA90 /* SearchServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A2B25C49C3F0029EA90 /* SearchServiceSpy.swift */; };
+		AA90A4BE25C5F5B1001B19A4 /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAF68E25C5E985003A0CD6 /* UIViewControllerExtensionTests.swift */; };
 		AAB55A9A25C2FB450054356C /* GenericMultiSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55A9925C2FB450054356C /* GenericMultiSelectorVC.swift */; };
 		AAB55AB325C321F70054356C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAB55AB225C321F70054356C /* IQKeyboardManagerSwift */; };
 		AAB55AD525C346850054356C /* ItunesMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55AC625C340F30054356C /* ItunesMedia.swift */; };
@@ -61,11 +62,11 @@
 		AAC6388425C449650058EBE1 /* MediaItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6383725C413A70058EBE1 /* MediaItemsViewController.swift */; };
 		AAC6389125C458DA0058EBE1 /* MediaSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC6388F25C458DA0058EBE1 /* MediaSectionHeaderView.swift */; };
 		AAC6389225C458DA0058EBE1 /* MediaSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC6389025C458DA0058EBE1 /* MediaSectionHeaderView.xib */; };
+		AADAF68825C5E49F003A0CD6 /* GenericMultiSelectorVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAF68725C5E49F003A0CD6 /* GenericMultiSelectorVCTests.swift */; };
 		AAFF39ED25C14A18008893B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF39EC25C14A18008893B6 /* AppDelegate.swift */; };
 		AAFF39EF25C14A18008893B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF39EE25C14A18008893B6 /* SceneDelegate.swift */; };
 		AAFF39F625C14A19008893B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFF39F525C14A19008893B6 /* Assets.xcassets */; };
 		AAFF39F925C14A19008893B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFF39F725C14A19008893B6 /* LaunchScreen.storyboard */; };
-		AAFF3A0425C14A19008893B6 /* ITunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3A0325C14A19008893B6 /* ITunesSearchTests.swift */; };
 		AAFF3AB625C19976008893B6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AAFF3AB525C19976008893B6 /* Kingfisher */; };
 		AAFF3ABB25C199E3008893B6 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AAFF3ABA25C199E3008893B6 /* MBProgressHUD */; };
 		AAFF3AC525C19FFE008893B6 /* SearchFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3ABF25C19FFE008893B6 /* SearchFormPresenter.swift */; };
@@ -138,6 +139,8 @@
 		AAC6387A25C443F00058EBE1 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		AAC6388F25C458DA0058EBE1 /* MediaSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSectionHeaderView.swift; sourceTree = "<group>"; };
 		AAC6389025C458DA0058EBE1 /* MediaSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaSectionHeaderView.xib; sourceTree = "<group>"; };
+		AADAF68725C5E49F003A0CD6 /* GenericMultiSelectorVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMultiSelectorVCTests.swift; sourceTree = "<group>"; };
+		AADAF68E25C5E985003A0CD6 /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
 		AAFF39E925C14A18008893B6 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFF39EC25C14A18008893B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFF39EE25C14A18008893B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +253,7 @@
 			children = (
 				AAC2372F25C565140008A689 /* UIButtonWithRoundCornersTests.swift */,
 				AAC2373625C567FE0008A689 /* UIViewWithRoundCornersTests.swift */,
+				AADAF68725C5E49F003A0CD6 /* GenericMultiSelectorVCTests.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -405,6 +409,7 @@
 			children = (
 				AAC2374625C56DA60008A689 /* UITableViewCellTests.swift */,
 				AAC2374A25C56E780008A689 /* UICollectionViewCellTests.swift */,
+				AADAF68E25C5E985003A0CD6 /* UIViewControllerExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -656,9 +661,10 @@
 				AAC2376C25C588B50008A689 /* MediaItemsPresenterTests.swift in Sources */,
 				AA718A2525C488930029EA90 /* SearchFormViewControllerTests.swift in Sources */,
 				AAC237A825C5AA730008A689 /* SearchFormInteractorTests.swift in Sources */,
+				AADAF68825C5E49F003A0CD6 /* GenericMultiSelectorVCTests.swift in Sources */,
+				AA90A4BE25C5F5B1001B19A4 /* UIViewControllerExtensionTests.swift in Sources */,
 				AAC2374B25C56E780008A689 /* UICollectionViewCellTests.swift in Sources */,
 				AAC2378425C5921B0008A689 /* MediaItemDetailsViewControllerTests.swift in Sources */,
-				AAFF3A0425C14A19008893B6 /* ITunesSearchTests.swift in Sources */,
 				AAC2377325C58E590008A689 /* MediaItemsViewControllerTests.swift in Sources */,
 				AAC2379525C596180008A689 /* MediaItemDetailsPresenterTests.swift in Sources */,
 				AA718A1C25C484EC0029EA90 /* SearchFormPresenterTests.swift in Sources */,

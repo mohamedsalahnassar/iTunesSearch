@@ -38,6 +38,7 @@ class SearchFormViewControllerTests: XCTestCase {
 
     // MARK: - Test doubles
     class SearchFormBusinessLogicSpy: SearchFormBusinessLogic {
+
         var invokedSearch = false
         var invokedSearchCount = 0
         var invokedSearchParameters: (request: SearchForm.Search.Request, Void)?
@@ -48,6 +49,34 @@ class SearchFormViewControllerTests: XCTestCase {
             invokedSearchCount += 1
             invokedSearchParameters = (request, ())
             invokedSearchParametersList.append((request, ()))
+        }
+    }
+
+    class SearchFormRoutingLogicSpy: NSObject, SearchFormRoutingLogic, SearchFormDataPassing {
+        var dataStore: SearchFormDataStore?
+
+        var invokedNavigateToSelectMediaTypesView = false
+        var invokedNavigateToSelectMediaTypesViewCount = 0
+        var stubbedNavigateToSelectMediaTypesViewDidUpdateSelectedMediaTypesResult: ([MediaTypeEntity], Void)?
+
+        func navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: @escaping ([MediaTypeEntity]) -> Void) {
+            invokedNavigateToSelectMediaTypesView = true
+            invokedNavigateToSelectMediaTypesViewCount += 1
+            if let result = stubbedNavigateToSelectMediaTypesViewDidUpdateSelectedMediaTypesResult {
+                didUpdateSelectedMediaTypes(result.0)
+            }
+        }
+
+        var invokedRouteToSearchResultsView = false
+        var invokedRouteToSearchResultsViewCount = 0
+        var invokedRouteToSearchResultsViewParameters: (fetchedData: [(MediaTypeEntity, [ItunesMedia])], Void)?
+        var invokedRouteToSearchResultsViewParametersList = [(fetchedData: [(MediaTypeEntity, [ItunesMedia])], Void)]()
+
+        func routeToSearchResultsView(fetchedData: [(MediaTypeEntity, [ItunesMedia])]) {
+            invokedRouteToSearchResultsView = true
+            invokedRouteToSearchResultsViewCount += 1
+            invokedRouteToSearchResultsViewParameters = (fetchedData, ())
+            invokedRouteToSearchResultsViewParametersList.append((fetchedData, ()))
         }
     }
 
@@ -62,17 +91,30 @@ class SearchFormViewControllerTests: XCTestCase {
     }
 
     // MARK: - Tests
-    func testShouldFetchOrdersWhenViewDidAppear() {
+    func testShouldInvokeSearchOnSubmitButtonTap() {
         // Given
-        let searchFormBusinessLogicSpy = SearchFormBusinessLogicSpy()
-        sut.interactor = searchFormBusinessLogicSpy
-        loadView()
+        let spy = SearchFormBusinessLogicSpy()
+        sut.interactor = spy
 
         // When
-        sut.viewDidAppear(true)
+        loadView()
+        sut.didTapSubmitButton(UIButton())
 
         // Then
-//        XCTAssert(searchFormBusinessLogicSpy.invokedSearch, "Should fetch orders right after the view appears")
+        XCTAssertTrue(spy.invokedSearch)
+    }
+
+    func testShouldInvokeRouterOnSelectMediaTypesButtonTap() {
+        // Given
+        let spy = SearchFormRoutingLogicSpy()
+        sut.router = spy
+
+        // When
+        loadView()
+        sut.didTapSelectMediaTypesButton(UIButton())
+
+        // Then
+        XCTAssertTrue(spy.invokedNavigateToSelectMediaTypesView)
     }
 
     func testShouldDisplaySelectedMediaTypes() {

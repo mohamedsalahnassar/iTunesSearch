@@ -65,6 +65,16 @@ class MediaItemDetailsViewControllerTests: XCTestCase {
     }
 
     // MARK: Tests
+    func testInitializingFromCoderShouldGiveNil() {
+        // Given
+        sut = MediaItemDetailsViewController(coder: NSCoder())
+
+        // When
+
+        // Then
+        XCTAssertNil(sut)
+    }
+
     func testShouldGetMediaItemDetailsWhenViewIsLoaded() {
         // Given
         let spy = MediaItemDetailsBusinessLogicSpy()
@@ -107,4 +117,5 @@ class MediaItemDetailsViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.backgroundImage.image)
         XCTAssertTrue(sut.playPreviewButton.isHidden)
     }
+
 }

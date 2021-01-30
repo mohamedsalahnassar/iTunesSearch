@@ -24,7 +24,7 @@ class MediaItemDetailsViewController: UIViewController, MediaItemDetailsDisplayL
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     // MARK: Setup
@@ -76,5 +76,6 @@ class MediaItemDetailsViewController: UIViewController, MediaItemDetailsDisplayL
         self.posterImage.load(url: viewModel.image, placeholder: UIImage(named: "No-Image-Placeholder"))
         self.backgroundImage.load(url: viewModel.image, placeholder: UIImage(named: "No-Image-Placeholder"))
         playPreviewButton.isHidden = viewModel.previewURL == nil
+        playPreviewButton.isEnabled = viewModel.previewURL != nil
     }
 }

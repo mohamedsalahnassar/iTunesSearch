@@ -48,7 +48,27 @@ class MediaItemsViewControllerTests: XCTestCase {
         }
     }
 
+    class CollectionViewSpy: UICollectionView {
+        // MARK: Method call expectations
+        var reloadDataCalled = false
+
+        // MARK: Spied methods
+        override func reloadData() {
+            reloadDataCalled = true
+        }
+    }
+
     // MARK: Tests
+    func testInitializingFromCoderShouldGiveNil() {
+        // Given
+        sut = MediaItemsViewController(coder: NSCoder())
+
+        // When
+
+        // Then
+        XCTAssertNil(sut)
+    }
+
     func testShouldGetMediaItemsWhenViewIsLoaded() {
         // Given
         let spy = MediaItemsBusinessLogicSpy()

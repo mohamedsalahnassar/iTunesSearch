@@ -75,7 +75,7 @@ class SearchFormViewController: UIViewController, SearchFormDisplayLogic {
     // MARK: Select Media Types Entities
     @IBOutlet weak var selectedMediaTypeCollectionView: UICollectionView!
 
-    @IBAction func didTapSelectMediaTypesButton(_ sender: UIButton) {
+    @IBAction func didTapSelectMediaTypesButton(_ sender: Any) {
         router?.navigateToSelectMediaTypesView(didUpdateSelectedMediaTypes: { [weak self] (selectedMediaTypes) in
             guard let self = self else { return }
             self.displayedMediaTypes = selectedMediaTypes

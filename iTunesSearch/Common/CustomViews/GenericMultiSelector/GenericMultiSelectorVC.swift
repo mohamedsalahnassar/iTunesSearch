@@ -12,22 +12,22 @@ typealias SelectableOption = Hashable & Equatable & CustomStringConvertible
 
 final class GenericMultiSelectorVC<T: SelectableOption>: UITableViewController {
     private let cellReuseIdentifier: String = "OptionCell"
-    struct Option<T> {
+    struct Option {
         let id: T
         var isSelected: Bool
     }
 
-    private var options: [Option<T>]
-    private var didUpdateSelectionBlock: (GenericMultiSelectorVC, [Option<T>]) -> Void
+    private var options: [Option]
+    private var didUpdateSelectionBlock: (GenericMultiSelectorVC, [Option]) -> Void
 
-    init(options: [Option<T>], _ didUpdateSelection: @escaping (GenericMultiSelectorVC, [Option<T>]) -> Void) {
+    init(options: [Option], _ didUpdateSelection: @escaping (GenericMultiSelectorVC, [Option]) -> Void) {
         self.options = options
         self.didUpdateSelectionBlock = didUpdateSelection
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ final class GenericMultiSelectorVC<T: SelectableOption>: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDoneButton))
     }
 
-    @objc private func didTapDoneButton() {
+    @objc func didTapDoneButton() {
         didUpdateSelectionBlock(self, options)
     }
 
