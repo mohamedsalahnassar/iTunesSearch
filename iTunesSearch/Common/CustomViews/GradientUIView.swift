@@ -12,21 +12,24 @@ import UIKit
 class GradientUIView: UIView {
 
     // the gradient start colour
-    @IBInspectable var startColor: UIColor? {
+    @IBInspectable
+    var startColor: UIColor? {
         didSet {
             updateGradient()
         }
     }
 
     // the gradient end colour
-    @IBInspectable var endColor: UIColor? {
+    @IBInspectable
+    var endColor: UIColor? {
         didSet {
             updateGradient()
         }
     }
 
     // the gradient angle, in degrees anticlockwise from 0 (east/right)
-    @IBInspectable var angle: CGFloat = 270 {
+    @IBInspectable
+    var angle: CGFloat = 270 {
         didSet {
             updateGradient()
         }

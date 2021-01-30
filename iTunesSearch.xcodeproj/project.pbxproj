@@ -16,6 +16,9 @@
 		AA718A0725C460D10029EA90 /* MediaItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A0125C460D10029EA90 /* MediaItemDetailsViewController.swift */; };
 		AA718A0825C460D10029EA90 /* MediaItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A0225C460D10029EA90 /* MediaItemDetailsInteractor.swift */; };
 		AA718A0C25C460E10029EA90 /* MediaItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA718A0B25C460E10029EA90 /* MediaItemDetailsViewController.xib */; };
+		AA718A1C25C484EC0029EA90 /* SearchFormPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A1825C484EC0029EA90 /* SearchFormPresenterTests.swift */; };
+		AA718A2525C488930029EA90 /* SearchFormViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A1525C484EC0029EA90 /* SearchFormViewControllerTests.swift */; };
+		AA718A2C25C49C3F0029EA90 /* SearchServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A2B25C49C3F0029EA90 /* SearchServiceSpy.swift */; };
 		AAB55A9A25C2FB450054356C /* GenericMultiSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55A9925C2FB450054356C /* GenericMultiSelectorVC.swift */; };
 		AAB55AB325C321F70054356C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAB55AB225C321F70054356C /* IQKeyboardManagerSwift */; };
 		AAB55AD525C346850054356C /* ItunesMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55AC625C340F30054356C /* ItunesMedia.swift */; };
@@ -24,6 +27,21 @@
 		AAB55AE625C34D5A0054356C /* MediaTypeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB55AA325C314D20054356C /* MediaTypeEntity.swift */; };
 		AAB55AEB25C34F1F0054356C /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC325C19FFE008893B6 /* SearchFormViewController.swift */; };
 		AAB55AF425C350270054356C /* SearchFormRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC125C19FFE008893B6 /* SearchFormRouter.swift */; };
+		AAC2372C25C562A90008A689 /* MediaTypeEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2372B25C562A90008A689 /* MediaTypeEntityTests.swift */; };
+		AAC2373025C565140008A689 /* UIButtonWithRoundCornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2372F25C565140008A689 /* UIButtonWithRoundCornersTests.swift */; };
+		AAC2373725C567FE0008A689 /* UIViewWithRoundCornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2373625C567FE0008A689 /* UIViewWithRoundCornersTests.swift */; };
+		AAC2374325C56BB50008A689 /* ItunesMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2374225C56BB50008A689 /* ItunesMediaTests.swift */; };
+		AAC2374725C56DA60008A689 /* UITableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2374625C56DA60008A689 /* UITableViewCellTests.swift */; };
+		AAC2374B25C56E780008A689 /* UICollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2374A25C56E780008A689 /* UICollectionViewCellTests.swift */; };
+		AAC2375A25C587F00008A689 /* MediaItemsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2375625C587F00008A689 /* MediaItemsInteractorTests.swift */; };
+		AAC2376C25C588B50008A689 /* MediaItemsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2375825C587F00008A689 /* MediaItemsPresenterTests.swift */; };
+		AAC2377025C5897D0008A689 /* MediaItemsModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2376F25C5897D0008A689 /* MediaItemsModelsTests.swift */; };
+		AAC2377325C58E590008A689 /* MediaItemsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2375525C587F00008A689 /* MediaItemsViewControllerTests.swift */; };
+		AAC2378425C5921B0008A689 /* MediaItemDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2378025C5921B0008A689 /* MediaItemDetailsViewControllerTests.swift */; };
+		AAC2379225C595960008A689 /* MediaItemDetailsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2378125C5921B0008A689 /* MediaItemDetailsInteractorTests.swift */; };
+		AAC2379525C596180008A689 /* MediaItemDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2378325C5921B0008A689 /* MediaItemDetailsPresenterTests.swift */; };
+		AAC2379A25C597F00008A689 /* SearchFormWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A1725C484EC0029EA90 /* SearchFormWorkerTests.swift */; };
+		AAC237A825C5AA730008A689 /* SearchFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA718A1625C484EC0029EA90 /* SearchFormInteractorTests.swift */; };
 		AAC637F325C3F5C60058EBE1 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC637F225C3F5C60058EBE1 /* SearchResponse.swift */; };
 		AAC6380125C3FFC90058EBE1 /* SearchFormWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFF3AC025C19FFE008893B6 /* SearchFormWorker.swift */; };
 		AAC6380825C401C30058EBE1 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AAC6380725C401C30058EBE1 /* Networking */; };
@@ -80,11 +98,29 @@
 		AA718A0125C460D10029EA90 /* MediaItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDetailsViewController.swift; sourceTree = "<group>"; };
 		AA718A0225C460D10029EA90 /* MediaItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDetailsInteractor.swift; sourceTree = "<group>"; };
 		AA718A0B25C460E10029EA90 /* MediaItemDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaItemDetailsViewController.xib; sourceTree = "<group>"; };
+		AA718A1525C484EC0029EA90 /* SearchFormViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormViewControllerTests.swift; sourceTree = "<group>"; };
+		AA718A1625C484EC0029EA90 /* SearchFormInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormInteractorTests.swift; sourceTree = "<group>"; };
+		AA718A1725C484EC0029EA90 /* SearchFormWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormWorkerTests.swift; sourceTree = "<group>"; };
+		AA718A1825C484EC0029EA90 /* SearchFormPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormPresenterTests.swift; sourceTree = "<group>"; };
+		AA718A2B25C49C3F0029EA90 /* SearchServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceSpy.swift; sourceTree = "<group>"; };
 		AAB55A9925C2FB450054356C /* GenericMultiSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMultiSelectorVC.swift; sourceTree = "<group>"; };
 		AAB55AA325C314D20054356C /* MediaTypeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeEntity.swift; sourceTree = "<group>"; };
 		AAB55ABE25C340340054356C /* SearchAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIService.swift; sourceTree = "<group>"; };
 		AAB55AC625C340F30054356C /* ItunesMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMedia.swift; sourceTree = "<group>"; };
 		AAB55AD925C34AFD0054356C /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		AAC2372B25C562A90008A689 /* MediaTypeEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeEntityTests.swift; sourceTree = "<group>"; };
+		AAC2372F25C565140008A689 /* UIButtonWithRoundCornersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithRoundCornersTests.swift; sourceTree = "<group>"; };
+		AAC2373625C567FE0008A689 /* UIViewWithRoundCornersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWithRoundCornersTests.swift; sourceTree = "<group>"; };
+		AAC2374225C56BB50008A689 /* ItunesMediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMediaTests.swift; sourceTree = "<group>"; };
+		AAC2374625C56DA60008A689 /* UITableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellTests.swift; sourceTree = "<group>"; };
+		AAC2374A25C56E780008A689 /* UICollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellTests.swift; sourceTree = "<group>"; };
+		AAC2375525C587F00008A689 /* MediaItemsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsViewControllerTests.swift; sourceTree = "<group>"; };
+		AAC2375625C587F00008A689 /* MediaItemsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsInteractorTests.swift; sourceTree = "<group>"; };
+		AAC2375825C587F00008A689 /* MediaItemsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsPresenterTests.swift; sourceTree = "<group>"; };
+		AAC2376F25C5897D0008A689 /* MediaItemsModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsModelsTests.swift; sourceTree = "<group>"; };
+		AAC2378025C5921B0008A689 /* MediaItemDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		AAC2378125C5921B0008A689 /* MediaItemDetailsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDetailsInteractorTests.swift; sourceTree = "<group>"; };
+		AAC2378325C5921B0008A689 /* MediaItemDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDetailsPresenterTests.swift; sourceTree = "<group>"; };
 		AAC637F225C3F5C60058EBE1 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		AAC6383325C413A70058EBE1 /* MediaItemsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsPresenter.swift; sourceTree = "<group>"; };
 		AAC6383525C413A70058EBE1 /* MediaItemsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemsRouter.swift; sourceTree = "<group>"; };
@@ -200,6 +236,45 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		AAC2372225C562720008A689 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2372B25C562A90008A689 /* MediaTypeEntityTests.swift */,
+				AAC2374225C56BB50008A689 /* ItunesMediaTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AAC2373325C5651F0008A689 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2372F25C565140008A689 /* UIButtonWithRoundCornersTests.swift */,
+				AAC2373625C567FE0008A689 /* UIViewWithRoundCornersTests.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		AAC2375425C587DE0008A689 /* MediaItems */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2375525C587F00008A689 /* MediaItemsViewControllerTests.swift */,
+				AAC2375625C587F00008A689 /* MediaItemsInteractorTests.swift */,
+				AAC2375825C587F00008A689 /* MediaItemsPresenterTests.swift */,
+				AAC2376F25C5897D0008A689 /* MediaItemsModelsTests.swift */,
+			);
+			path = MediaItems;
+			sourceTree = "<group>";
+		};
+		AAC2377F25C592080008A689 /* MediaItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2378025C5921B0008A689 /* MediaItemDetailsViewControllerTests.swift */,
+				AAC2378125C5921B0008A689 /* MediaItemDetailsInteractorTests.swift */,
+				AAC2378325C5921B0008A689 /* MediaItemDetailsPresenterTests.swift */,
+			);
+			path = MediaItemDetails;
+			sourceTree = "<group>";
+		};
 		AAC6383225C4138E0058EBE1 /* MediaItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +351,6 @@
 				AAB55ABD25C340160054356C /* API */,
 				AAB55AA725C314D80054356C /* Models */,
 				AAFF3B0325C203CC008893B6 /* CustomViews */,
-				AAFF3AF625C1AC1B008893B6 /* Protocols */,
 				AAFF3A2A25C15B87008893B6 /* Extensions */,
 			);
 			path = Common;
@@ -308,7 +382,10 @@
 		AAFF3A6325C18790008893B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AA718A2B25C49C3F0029EA90 /* SearchServiceSpy.swift */,
 				AAFF3AD525C1A0AD008893B6 /* SearchForm */,
+				AAC2375425C587DE0008A689 /* MediaItems */,
+				AAC2377F25C592080008A689 /* MediaItemDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -316,6 +393,8 @@
 		AAFF3A6425C18797008893B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AAC2373325C5651F0008A689 /* CustomViews */,
+				AAC2372225C562720008A689 /* Models */,
 				AAFF3A6525C187A8008893B6 /* Extensions */,
 			);
 			path = Common;
@@ -324,6 +403,8 @@
 		AAFF3A6525C187A8008893B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AAC2374625C56DA60008A689 /* UITableViewCellTests.swift */,
+				AAC2374A25C56E780008A689 /* UICollectionViewCellTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,15 +440,12 @@
 		AAFF3AD525C1A0AD008893B6 /* SearchForm */ = {
 			isa = PBXGroup;
 			children = (
+				AA718A1525C484EC0029EA90 /* SearchFormViewControllerTests.swift */,
+				AA718A1625C484EC0029EA90 /* SearchFormInteractorTests.swift */,
+				AA718A1725C484EC0029EA90 /* SearchFormWorkerTests.swift */,
+				AA718A1825C484EC0029EA90 /* SearchFormPresenterTests.swift */,
 			);
 			path = SearchForm;
-			sourceTree = "<group>";
-		};
-		AAFF3AF625C1AC1B008893B6 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		AAFF3B0325C203CC008893B6 /* CustomViews */ = {
@@ -567,7 +645,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC2374325C56BB50008A689 /* ItunesMediaTests.swift in Sources */,
+				AAC2373725C567FE0008A689 /* UIViewWithRoundCornersTests.swift in Sources */,
+				AA718A2C25C49C3F0029EA90 /* SearchServiceSpy.swift in Sources */,
+				AAC2375A25C587F00008A689 /* MediaItemsInteractorTests.swift in Sources */,
+				AAC2374725C56DA60008A689 /* UITableViewCellTests.swift in Sources */,
+				AAC2377025C5897D0008A689 /* MediaItemsModelsTests.swift in Sources */,
+				AAC2379225C595960008A689 /* MediaItemDetailsInteractorTests.swift in Sources */,
+				AAC2372C25C562A90008A689 /* MediaTypeEntityTests.swift in Sources */,
+				AAC2376C25C588B50008A689 /* MediaItemsPresenterTests.swift in Sources */,
+				AA718A2525C488930029EA90 /* SearchFormViewControllerTests.swift in Sources */,
+				AAC237A825C5AA730008A689 /* SearchFormInteractorTests.swift in Sources */,
+				AAC2374B25C56E780008A689 /* UICollectionViewCellTests.swift in Sources */,
+				AAC2378425C5921B0008A689 /* MediaItemDetailsViewControllerTests.swift in Sources */,
 				AAFF3A0425C14A19008893B6 /* ITunesSearchTests.swift in Sources */,
+				AAC2377325C58E590008A689 /* MediaItemsViewControllerTests.swift in Sources */,
+				AAC2379525C596180008A689 /* MediaItemDetailsPresenterTests.swift in Sources */,
+				AA718A1C25C484EC0029EA90 /* SearchFormPresenterTests.swift in Sources */,
+				AAC2373025C565140008A689 /* UIButtonWithRoundCornersTests.swift in Sources */,
+				AAC2379A25C597F00008A689 /* SearchFormWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

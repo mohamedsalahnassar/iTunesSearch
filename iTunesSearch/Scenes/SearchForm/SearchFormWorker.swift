@@ -11,7 +11,7 @@ import Combine
 
 class SearchFormWorker {
     let searchService: SearchService
-    var cancellable: Set<AnyCancellable> = []
+    var cancellables: Set<AnyCancellable> = []
 
     internal init(searchService: SearchService) {
         self.searchService = searchService
@@ -30,7 +30,7 @@ class SearchFormWorker {
             }, receiveValue: { (results) in
                 completionHandler(.success(results))
             })
-            .store(in: &cancellable)
+            .store(in: &cancellables)
     }
 
     private func fetchResults(term: String, for mediaTypes: [MediaTypeEntity]) -> AnyPublisher<[(MediaTypeEntity, [ItunesMedia])], Error> {
@@ -43,7 +43,7 @@ class SearchFormWorker {
 
     private func fetchResult(term: String, for mediaType: MediaTypeEntity) -> AnyPublisher<(MediaTypeEntity, [ItunesMedia]), Error> {
         searchService.search(term: term, entity: mediaType.rawValue)
-            .subscribe(on: DispatchQueue.global(qos: .userInitiated))
+//            .subscribe(on: DispatchQueue.global(qos: .userInitiated))
             .map(\.results)
             .replaceNil(with: [])
             .map({(mediaType, $0)})

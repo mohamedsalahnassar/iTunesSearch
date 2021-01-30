@@ -11,7 +11,7 @@ import UIKit
 typealias SelectableOption = Hashable & Equatable & CustomStringConvertible
 
 final class GenericMultiSelectorVC<T: SelectableOption>: UITableViewController {
-    let cellReuseIdentifier: String = "OptionCell"
+    private let cellReuseIdentifier: String = "OptionCell"
     struct Option<T> {
         let id: T
         var isSelected: Bool
@@ -35,7 +35,7 @@ final class GenericMultiSelectorVC<T: SelectableOption>: UITableViewController {
         setupUI()
     }
 
-    func setupUI() {
+    private func setupUI() {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
 
         self.clearsSelectionOnViewWillAppear = false

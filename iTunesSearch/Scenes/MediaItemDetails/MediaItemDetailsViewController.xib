@@ -33,7 +33,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-ZH-ZV5" userLabel="blur">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-DX-4hf">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-DX-4hf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
                                         </imageView>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZU-N0-1Au">
@@ -112,7 +112,7 @@
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsp-8l-xbX" customClass="UIViewWithRoundCorners" customModule="iTunesSearch" customModuleProvider="target">
                             <rect key="frame" x="35" y="100" width="150" height="220"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No-Image-Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="17q-F2-VMb">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="17q-F2-VMb">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-N9-JBb">
@@ -174,7 +174,6 @@
         </view>
     </objects>
     <resources>
-        <image name="No-Image-Placeholder" width="330" height="407"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

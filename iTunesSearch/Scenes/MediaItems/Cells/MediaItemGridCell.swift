@@ -10,8 +10,8 @@ import UIKit
 
 class MediaItemGridCell: UICollectionViewCell {
 
-    @IBOutlet private var posterImage: UIImageView!
-    @IBOutlet private var title: UILabel!
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var title: UILabel!
 
     public func configureCell(title: String, imageURL: URL?) {
         self.posterImage.load(url: imageURL, placeholder: UIImage(named: "No-Image-Placeholder"))

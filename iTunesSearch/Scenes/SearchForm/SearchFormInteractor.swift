@@ -34,7 +34,9 @@ class SearchFormInteractor: SearchFormBusinessLogic, SearchFormDataStore {
         }
 
         presenter?.showLoadingIndicator()
-        worker = SearchFormWorker(searchService: SearchAPIService())
+        if worker == nil {
+            worker = SearchFormWorker(searchService: SearchAPIService())
+        }
         worker?.fetchResults(term: searchTerm, for: request.mediaTypes, completionHandler: { [weak self] (result) in
             guard let self = self else { return }
             switch result {

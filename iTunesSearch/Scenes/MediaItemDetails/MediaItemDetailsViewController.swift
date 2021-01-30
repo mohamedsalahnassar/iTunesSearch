@@ -53,12 +53,12 @@ class MediaItemDetailsViewController: UIViewController, MediaItemDetailsDisplayL
     }
 
     // MARK: Display Media Item
-    @IBOutlet private var itemTitle: UILabel!
-    @IBOutlet private var itemSubtitle: UILabel!
-    @IBOutlet private var longDescription: UILabel!
-    @IBOutlet private var posterImage: UIImageView!
-    @IBOutlet private var backgroundImage: UIImageView!
-    @IBOutlet private var playPreviewButton: UIButton!
+    @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var itemSubtitle: UILabel!
+    @IBOutlet weak var longDescription: UILabel!
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var playPreviewButton: UIButton!
 
     @IBAction func didTapPlayPreviewVideo(_ sender: UIButton) {
         guard let previewLink = router?.dataStore?.itunesMedia.previewUrl else { return }
