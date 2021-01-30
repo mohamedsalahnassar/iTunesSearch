@@ -44,8 +44,8 @@ class MediaItemsModelsTests: XCTestCase {
         sut = MediaItems.getMediaItems.ViewModel.MediaItemsSection.Media(from: itunesMediaSample)
 
         // Then
-        XCTAssertEqual(sut.title, itunesMediaSample.collectionName)
-        XCTAssertEqual(sut.subtitle, itunesMediaSample.artistName)
+        XCTAssertEqual(sut.title, "collectionName test")
+        XCTAssertEqual(sut.subtitle, "artistName test")
         XCTAssertNil(sut.image)
     }
 
@@ -70,34 +70,8 @@ class MediaItemsModelsTests: XCTestCase {
         sut = MediaItems.getMediaItems.ViewModel.MediaItemsSection.Media(from: itunesMediaSample)
 
         // Then
-        XCTAssertEqual(sut.title, itunesMediaSample.artistName)
-        XCTAssertEqual(sut.subtitle, itunesMediaSample.artistType)
-        XCTAssertNil(sut.image)
-    }
-
-    func testInitializerCase3() {
-        // Given
-        let itunesMediaSample = ItunesMedia(
-            collectionName: nil,
-            artistName: nil,
-            artistType: "artistType test",
-            shortDescription: nil,
-            longDescription: nil,
-            primaryGenreName: nil,
-            trackName: nil,
-            trackCensoredName: nil,
-            artworkUrl30: nil,
-            artworkUrl60: nil,
-            artworkUrl100: nil,
-            previewUrl: nil
-        )
-
-        // When
-        sut = MediaItems.getMediaItems.ViewModel.MediaItemsSection.Media(from: itunesMediaSample)
-
-        // Then
-        XCTAssertEqual(sut.title, "No Title")
-        XCTAssertEqual(sut.subtitle, itunesMediaSample.artistType)
+        XCTAssertEqual(sut.title, "artistName test")
+        XCTAssertEqual(sut.subtitle, "artistType test")
         XCTAssertNil(sut.image)
     }
 
@@ -122,8 +96,8 @@ class MediaItemsModelsTests: XCTestCase {
         sut = MediaItems.getMediaItems.ViewModel.MediaItemsSection.Media(from: itunesMediaSample)
 
         // Then
-        XCTAssertEqual(sut.title, itunesMediaSample.trackName)
-        XCTAssertEqual(sut.subtitle, itunesMediaSample.artistName)
+        XCTAssertEqual(sut.title, "trackName test")
+        XCTAssertEqual(sut.subtitle, "artistName test")
         XCTAssertNil(sut.image)
     }
 
@@ -148,8 +122,8 @@ class MediaItemsModelsTests: XCTestCase {
         sut = MediaItems.getMediaItems.ViewModel.MediaItemsSection.Media(from: itunesMediaSample)
 
         // Then
-        XCTAssertEqual(sut.title, itunesMediaSample.trackCensoredName)
-        XCTAssertEqual(sut.subtitle, itunesMediaSample.artistName)
+        XCTAssertEqual(sut.title, "trackCensoredName test")
+        XCTAssertEqual(sut.subtitle, "artistName test")
         XCTAssertNil(sut.image)
     }
 
@@ -175,7 +149,7 @@ class MediaItemsModelsTests: XCTestCase {
 
         // Then
         XCTAssertEqual(sut.title, "No Title")
-        XCTAssertEqual(sut.subtitle, itunesMediaSample.artistName)
+        XCTAssertNil(sut.subtitle)
         XCTAssertNil(sut.image)
     }
 

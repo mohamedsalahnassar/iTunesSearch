@@ -35,7 +35,6 @@ class SearchFormWorkerTests: XCTestCase {
     func testSuccessfulSearch() {
         // Given
         let expect = expectation(description: "expects results")
-        let expectedSearchResults: [(MediaTypeEntity, [ItunesMedia])] = [(MediaTypeEntity.album, [])]
         let publisher = PassthroughSubject<SearchResponse, Error>()
         var fetchedSearchResults: [(MediaTypeEntity, [ItunesMedia])]?
         searchServiceSpy.stubbedSearchResult = publisher
@@ -56,7 +55,7 @@ class SearchFormWorkerTests: XCTestCase {
         publisher.send(completion: .finished)
 
         // Then
-        wait(for: [expect], timeout: 1)
+        wait(for: [expect], timeout: 5)
 
         XCTAssertTrue(self.searchServiceSpy.invokedSearch)
         XCTAssertNotNil(fetchedSearchResults)
@@ -87,7 +86,7 @@ class SearchFormWorkerTests: XCTestCase {
         publisher.send(completion: .finished)
 
         // Then
-        wait(for: [expect], timeout: 1)
+        wait(for: [expect], timeout: 5)
 
         XCTAssertTrue(self.searchServiceSpy.invokedSearch)
         XCTAssertNotNil(returnedError)

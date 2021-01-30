@@ -136,8 +136,6 @@ class SearchFormInteractorTests: XCTestCase {
         sut.search(request: request)
 
         // Then
-        let expectation = XCTestExpectation(description: "Got back Results from the stub")
-
         XCTAssertTrue(spy.invokedShowLoadingIndicator)
     }
 }
