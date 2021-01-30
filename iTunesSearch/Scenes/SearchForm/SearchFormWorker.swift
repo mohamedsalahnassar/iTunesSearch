@@ -43,7 +43,7 @@ class SearchFormWorker {
 
     private func fetchResult(term: String, for mediaType: MediaTypeEntity) -> AnyPublisher<(MediaTypeEntity, [ItunesMedia]), Error> {
         searchService.search(term: term, entity: mediaType.rawValue)
-//            .subscribe(on: DispatchQueue.global(qos: .userInitiated))
+            .subscribe(on: DispatchQueue.global(qos: .userInitiated))
             .map(\.results)
             .replaceNil(with: [])
             .map({(mediaType, $0)})
