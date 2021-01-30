@@ -52,32 +52,15 @@ class SearchFormWorkerTests: XCTestCase {
             }
         }
 
-        let itunesMedia = ItunesMedia(
-            collectionName: "test",
-            artistName: "test",
-            artistType: "test",
-            shortDescription: "test",
-            longDescription: "test",
-            primaryGenreName: "test",
-            trackName: "test",
-            trackCensoredName: "test",
-            artworkUrl30: nil,
-            artworkUrl60: nil,
-            artworkUrl100: nil,
-            previewUrl: nil
-        )
-        publisher.send(SearchResponse(resultCount: 0, errorMessage: nil, results: [itunesMedia]))
+        publisher.send(SearchResponse(resultCount: 0, errorMessage: nil, results: []))
         publisher.send(completion: .finished)
 
         // Then
-        DispatchQueue.main.async {
-            XCTAssertTrue(self.searchServiceSpy.invokedSearch)
-            XCTAssertNotNil(fetchedSearchResults)
-            XCTAssert(!(fetchedSearchResults?.isEmpty ?? true))
-            XCTAssert(fetchedSearchResults?.first?.0 == expectedSearchResults.first?.0)
-        }
-
         wait(for: [expect], timeout: 1)
+
+        XCTAssertTrue(self.searchServiceSpy.invokedSearch)
+        XCTAssertNotNil(fetchedSearchResults)
+        XCTAssertEqual(fetchedSearchResults?.count, 0)
     }
 
     func testFailingSearch() {
